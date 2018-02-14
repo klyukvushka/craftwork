@@ -7,7 +7,7 @@
 	background-position:  center bottom, center center;
 	background-repeat: no-repeat, no-repeat;
 	background-size: auto, cover; 
-     	&__container{
+    &__container{
 		margin: $margin;
 		max-width: $max-width;
 		width: $width;
@@ -26,6 +26,7 @@
 		color: $textColor;
 		text-align: center;
 		font-family: "Lato", sans-serif;
+		font-weight: 400;
 		font-size: 22px;
 	}
 	&__button{
@@ -40,6 +41,7 @@
 		text-decoration: none;
 		font-family: "Lato", sans-serif;
 		font-size: 20px;
+		font-weight: 400;
 		color: $headerColor;
 	}
 	&__img{
@@ -64,12 +66,11 @@
 	&__item {
 		font-family: "Lato", sans-serif;
 		font-size: 18px;
-		font-weight: normal;
+		font-weight: 400;
 		&_logo{
 			z-index: 1;
 			position: absolute;
 			left: 50%;
-
 		}
 	}
 	&__link{
@@ -83,5 +84,53 @@
 			padding: 12px 25px;
 			background-color: #267df4;
 		}
+	}
+}
+.feature{
+	background-color: $background;
+	&__container{
+		margin: $margin;
+		max-width: $max-width;
+		width: $width;
+		height: 560px;
+		padding-top: 120px;
+		display: flex;
+		justify-content: space-between;
+		font-family: "Lato", sans-serif;
+		font-weight: 400;
+		font-size: 18px;
+		color: $textColor;
+		border-bottom: 2px solid #f4f4f4;
+	}
+	&__content{
+		width: 520px;
+	}
+	&__illustration{
+		padding-bottom: 40px;
+	}
+	&__title{
+		margin: 0;
+		padding-bottom: 20px;
+		font-family: "Lato", sans-serif;
+		font-weight: 300;
+		font-size: 26px;
+		color: $headerColor;
+	}
+}
+.protection{
+	background: url(../images/iphone_bck.png), #ffffff;
+	background-position: 0 20%, center;
+	background-repeat: no-repeat, repeat;
+	&__container{
+		padding-top: 120px;
+		margin: $margin;
+		max-width: $max-width;
+		width: $width;
+		height: 1000px;
+	}
+	&__title{
+		font-family: "Varela Round", sans-serif;
+		font-size: 42px;
+		color: $headerColor;
 	}
 }
