@@ -25,9 +25,11 @@
 		padding-bottom: 60px;
 		color: $textColor;
 		text-align: center;
-		font-family: "Lato", sans-serif;
-		font-weight: 400;
+		font-family: $font;
 		font-size: 22px;
+		font-weight: 400;
+		line-height: 1.5;
+		
 	}
 	&__button{
 		display: block;
@@ -39,7 +41,7 @@
 	}
 	&__video{
 		text-decoration: none;
-		font-family: "Lato", sans-serif;
+		font-family: $font;
 		font-size: 20px;
 		font-weight: 400;
 		color: $headerColor;
@@ -60,11 +62,11 @@
 		padding-left: 0;
 	}
 	&__icon{
-		padding:  0 7px;
+		padding:  0 17px;
 
 	}
 	&__item {
-		font-family: "Lato", sans-serif;
+		font-family: $font;
 		font-size: 18px;
 		font-weight: 400;
 		&_logo{
@@ -81,11 +83,12 @@
 			font-weight: bold;
 			border: 1px solid transparent;
 			border-radius: 30px;
-			padding: 12px 25px;
+			padding: 12px 30px;
 			background-color: #267df4;
 		}
 	}
 }
+
 .feature{
 	background-color: $background;
 	&__container{
@@ -96,11 +99,12 @@
 		padding-top: 120px;
 		display: flex;
 		justify-content: space-between;
-		font-family: "Lato", sans-serif;
+		font-family: $font;
 		font-weight: 400;
 		font-size: 18px;
 		color: $textColor;
 		border-bottom: 2px solid #f4f4f4;
+		line-height: 1.5;
 	}
 	&__content{
 		width: 520px;
@@ -111,26 +115,213 @@
 	&__title{
 		margin: 0;
 		padding-bottom: 20px;
-		font-family: "Lato", sans-serif;
+		font-family: $font;
 		font-weight: 300;
 		font-size: 26px;
 		color: $headerColor;
 	}
 }
+
 .protection{
 	background: url(../images/iphone_bck.png), #ffffff;
-	background-position: 0 20%, center;
+	background-position: 0 30%, center;
 	background-repeat: no-repeat, repeat;
+	background-size: auto, auto;
 	&__container{
-		padding-top: 120px;
+		padding-top: 150px;
 		margin: $margin;
 		max-width: $max-width;
 		width: $width;
-		height: 1000px;
+		height: 900px;
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+		align-items: flex-end;
+	}
+	&__content{
+		width: 600px;
+		font-family: $font;
+		font-weight: 400;
+		font-size: 22px;
+		color: $textColor;
+		line-height: 1.5;
+	}
+	&__title{
+		padding-bottom: 40px;
+		font-family: "Varela Round", sans-serif;
+		font-size: 42px;
+		color: $headerColor;
+	}
+}
+.button{
+	width: 540px;
+	padding-top: 40px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	&__item{
+		width: 260px;
+		background-color: #267df4;
+		border: 1px solid transparent;
+		padding-top: 12px;
+		padding-bottom: 12px;
+		padding-left: 15px;
+		text-align: center;
+		border-radius: 30px;
+		&_learn{
+			width: 200px;
+			background-color: #ffffff;
+			border: 2px solid #dbdddf;
+			border-radius: 30px;
+		}
+	}
+	&__link{
+		text-decoration: none;
+		color: #ffffff;
+		font-family: $font;
+		font-weight: 400;
+		font-size: 26px;
+		&_learn{
+			color: $headerColor;
+		}
+	}
+	&__illustration{
+		padding-left: 47px;
+	}
+}
+
+.world{
+	background: url(../images/map.png), #ffffff;
+	background-position: 70% 0, center;
+	background-repeat: no-repeat, repeat;
+	background-size: auto, auto;
+	&__container{
+		margin: $margin;
+		max-width: $max-width;
+		width: $width;
+		height: 700px;
+	}
+	&__content{
+		padding-top: 40px;
+		width: 560px;
+		font-family: $font;
+		font-weight: 400;
+		font-size: 22px;
+		color: $textColor;
+		line-height: 1.5; 
 	}
 	&__title{
 		font-family: "Varela Round", sans-serif;
 		font-size: 42px;
 		color: $headerColor;
+	}
+
+}
+.partners{
+	&__title{
+		font-family: $font;
+		font-weight: 700;
+		font-size: 16px;
+		color: $headerColor;
+		padding-top: 30px;
+		padding-bottom: 30px;
+	}
+	&__icon{
+		padding-right: 35px;
+	}
+}
+
+.interface{
+	background-color: #f5f5f8;
+	&__container{
+		padding-top: 50px;
+		margin: $margin;
+		max-width: $max-width;
+		width: $width;
+		height: 900px;
+	}
+	&__title{
+		padding-bottom: 20px;
+		text-align: center;
+		font-family: "Varela Round", sans-serif;
+		font-size: 42px;
+		color: $headerColor;
+	}
+	&__border{
+		margin: $margin;
+		padding-bottom: 20px;
+		width: 50px;
+		border-top: 3px solid #267df4;
+	}
+	&__subtitle{
+		text-align: center;
+		text-transform: uppercase;
+		font-family: $font;
+		font-weight: 700;
+		font-size: 14px;
+		color: $textColor;
+	}
+
+}
+.install{
+		&__subtitle{
+		margin-bottom: 0;
+		text-transform: uppercase;
+		font-family: $font;
+		font-weight: 400;
+		font-size: 14px;
+		color: $textColor;
+		text-align: center;
+		&_load{
+			font-weight: 300;
+			padding: 40px 0 30px;
+		}
+	}
+	&__title{
+		font-family: "Varela Round", sans-serif;
+		font-size: 42px;
+		color: $headerColor;
+		text-align: center;
+	}
+	&__icon{
+		display: block;
+		margin: $margin;
+	}
+}
+.invite{
+	margin: $margin;
+	width: 400px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	flex-wrap: nowrap;
+	border: 2px solid #dddde0;
+	border-radius: 30px;
+	padding: 3px;
+	&__email{
+		height: 15px;
+		padding-top: 10px;
+		font-family: $font;
+		font-weight: 700;
+		font-size: 12px;
+		color: $headerColor;
+		text-align: center;
+	}
+	&__button{
+		border: 1px solid transparent;
+		border-radius: 30px;
+		background-color: #6fc754;
+		text-align: center;
+		padding: 10px 12px;
+	}
+	&__link{
+		text-decoration: none;
+		color: #ffffff;
+		font-family: $font;
+		font-weight: 400;
+		font-size: 14px;
+	}
+	&__illustration{
+		padding-left: 20px;
 	}
 }
