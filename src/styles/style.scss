@@ -2,6 +2,17 @@
 @import "variables";
 @import "normalize";
 
+html {
+  box-sizing: border-box;
+  -ms-overflow-style: scrollbar;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
 .header{
 	background: url(../images/iphone.png),url(../images/background.jpg);
 	background-position:  center bottom, center center;
@@ -12,6 +23,8 @@
 		max-width: $max-width;
 		width: $width;
 		height: 1000px;
+		padding-left: 25px;
+		padding-right: 25px;
 	}
 	&__title{
 		padding-top: 80px;
@@ -31,50 +44,56 @@
 		line-height: 1.5;
 	}
 	&__button{
-		display: block;
-		margin: $margin;
-		width: 230px;
-		text-align: center;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		
 	}
 }
 .menu{
 	padding-top: 40px;
 	display: flex;
 	justify-content: space-between;
+	align-items: center;
+	&__wrapper{
+		display: flex;
+		flex-wrap: nowrap;
+		justify-content: space-between;
+		width: 400px;
+	}
 	&__items{
+		margin: 0;
+		list-style: none;
+		padding-left: 0;
+		display: flex;
+		justify-content: space-around;
+		width: 400px;
+	}
+	&__content{
+		width: 400px;
 		display: flex;
 		flex-wrap: nowrap;
 		justify-content: space-between;
+		align-items: center;
+	}
+	&__parts{
+		width: 200px;
 		list-style: none;
 		margin: 0;
 		padding-left: 0;
-		width: 400px;
-		&_second{
 		display: flex;
-		flex-wrap: nowrap;
-		justify-content: space-between;
-		list-style: none;
-		margin: 0;
-		padding-left: 0;
-		width: 400px;
-		}
+		justify-content: space-around;
 	}
-	&__item {
-	text-align: center;
-		&_logo{
-			z-index: 1;
-			position: absolute;
-			left: 47%;
-		}
-	}
+	
 	&__link{
+		text-align: center;
 		font-family: $font;
 		font-size: 20px;
 		font-weight: 400;
 		text-decoration: none;
 		color: $headerColor;
 		&_help{
-		color: $textColor;
+		color: $textColor;}
 	}
 }
 
@@ -86,6 +105,8 @@
 		width: $width;
 		height: 560px;
 		padding-top: 120px;
+		padding-left: 25px;
+		padding-right: 25px;
 		display: flex;
 		justify-content: space-between;
 		font-family: $font;
@@ -122,6 +143,8 @@
 		max-width: $max-width;
 		width: $width;
 		height: 900px;
+		padding-left: 25px;
+		padding-right: 25px;
 		display: flex;
 		flex-direction: column;
 		justify-content: flex-start;
@@ -143,19 +166,9 @@
 	}
 }
 .buttons{
-	width: 540px;
 	padding-top: 40px;
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
-	flex-wrap: wrap;
-	&__item{
-		height: 50px;
-		width: 260px;
-		text-align: center;
-		&_learn{
-			width: 200px;
-		}
+	&:first-child{
+		margin-right: 40px;
 	}
 }	
 
@@ -170,6 +183,7 @@
 	border: 2px solid #dbdddf;
 	padding: 12px 33px; 
 	border-radius: 30px;
+	text-align: center;
 	&_primary{
 		border: 1px solid transparent;
 		background-color: #267df4;
@@ -196,7 +210,16 @@
 		border: 1px solid transparent;
 		color: #ffffff;
 		font-size: 14px;
-
+	}
+	&_info{
+	font-size: 16px;
+	color: #c2c2c3;
+	background-color: transparent;
+	&:hover{
+		color: $headerColor;
+		background-color: #ffffff;
+		box-shadow: 4px 5px 7px;
+	}
 	}
 }
 
@@ -210,6 +233,8 @@
 		max-width: $max-width;
 		width: $width;
 		height: 700px;
+		padding-left: 25px;
+		padding-right: 25px;
 	}
 	&__content{
 		padding-top: 40px;
@@ -249,6 +274,8 @@
 		max-width: $max-width;
 		width: $width;
 		height: 900px;
+		padding-left: 25px;
+		padding-right: 25px;
 	}
 	&__title{
 		padding-bottom: 20px;
@@ -315,9 +342,6 @@
 		border: none;
 		background: #f5f5f8;
 	}
-	&__button{
-		text-align: center;
-	}
 }
 
 .review{
@@ -327,6 +351,8 @@
 		max-width: $max-width;
 		width: $width;
 		height: 700px;
+		padding-left: 25px;
+		padding-right: 25px;
 	}
 	&__title{
 		font-family: $font;
@@ -367,6 +393,8 @@
 		max-width: $max-width;
 		width: $width;
 		height: 700px;
+		padding-left: 25px;
+		padding-right: 25px;
 	}
 	&__title{
 		padding-top: 100px;
@@ -415,25 +443,7 @@
 	}
 	}
 }
-.btn{
-	width: 90px;
-	text-align: center;
-	text-decoration: none;
-	font-family: $font;
-	font-weight: 400;
-	font-size: 16px;
-	color: #c2c2c3;
-	padding: 12px 25px;
-	
-	&:hover{
-		color: $headerColor;
-		background-color: #ffffff;
-		padding: 12px 25px;
-		border: 1px solid transparent;
-		border-radius: 30px;
-		box-shadow: 4px 5px 7px;
-	}
-}
+
 
 .subscribe{
 	background-color: #ffffff;
@@ -442,6 +452,8 @@
 		max-width: $max-width;
 		width: $width;
 		height: 350px;
+		padding-left: 25px;
+		padding-right: 25px;
 		border-bottom: 1px solid #dddde0;
 	}
 	&__title{
@@ -480,6 +492,8 @@
 .footer{
 	background-color: #ffffff;
 	&__container{
+		padding-left: 25px;
+		padding-right: 25px;
 		padding-top: 80px;
 		margin: $margin;
 		max-width: $max-width;
@@ -498,10 +512,7 @@
 		font-size: 14px;
 		color: $textColor;
 		line-height: 1.5;
-	&__logo{
-		padding-top: 20px;
-	}
-	&__download{
+		&__download{
 		padding-top: 25px;
 	}
 }
@@ -542,8 +553,11 @@
 		max-width: $max-width;
 		width: $width;
 		padding-top: 20px;
+		padding-left: 25px;
+		padding-right: 25px;
 		display: flex;
 		justify-content: space-between;
+		align-items: center;
 	}
 	&__copy{
 		font-family: $font;
@@ -561,6 +575,7 @@
 	width: 250px;
 	display: flex;
 	justify-content: space-between;
+	align-items: center;
 	&__title{
 		margin: 0;
 		font-family: $font;
@@ -569,4 +584,4 @@
 		font-weight: 700;
 		vertical-align: center;
 	}
-}}
+}
