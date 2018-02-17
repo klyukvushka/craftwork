@@ -22,37 +22,25 @@
 	}
 	&__description{
 		padding-top: 40px;
-		padding-bottom: 60px;
+		padding-bottom: 40px;
 		color: $textColor;
 		text-align: center;
 		font-family: $font;
 		font-size: 22px;
 		font-weight: 400;
 		line-height: 1.5;
-		
 	}
 	&__button{
 		display: block;
 		margin: $margin;
-		padding: 18px 28px;
-		border: 2px solid #dbdddf;
-		border-radius: 30px;
 		width: 230px;
+		text-align: center;
 	}
-	&__video{
-		text-decoration: none;
-		font-family: $font;
-		font-size: 20px;
-		font-weight: 400;
-		color: $headerColor;
-	}
-	&__img{
-		padding: 0 20px;
-	}
-
 }
 .menu{
 	padding-top: 40px;
+	display: flex;
+	justify-content: space-between;
 	&__items{
 		display: flex;
 		flex-wrap: nowrap;
@@ -60,32 +48,33 @@
 		list-style: none;
 		margin: 0;
 		padding-left: 0;
-	}
-	&__icon{
-		padding:  0 17px;
-
+		width: 400px;
+		&_second{
+		display: flex;
+		flex-wrap: nowrap;
+		justify-content: space-between;
+		list-style: none;
+		margin: 0;
+		padding-left: 0;
+		width: 400px;
+		}
 	}
 	&__item {
-		font-family: $font;
-		font-size: 18px;
-		font-weight: 400;
+	text-align: center;
 		&_logo{
 			z-index: 1;
 			position: absolute;
-			left: 50%;
+			left: 47%;
 		}
 	}
 	&__link{
+		font-family: $font;
+		font-size: 20px;
+		font-weight: 400;
 		text-decoration: none;
 		color: $headerColor;
-		&_last{
-			color: #ffffff;
-			font-weight: bold;
-			border: 1px solid transparent;
-			border-radius: 30px;
-			padding: 12px 30px;
-			background-color: #267df4;
-		}
+		&_help{
+		color: $textColor;
 	}
 }
 
@@ -153,40 +142,61 @@
 		color: $headerColor;
 	}
 }
-.button{
+.buttons{
 	width: 540px;
 	padding-top: 40px;
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
+	flex-wrap: wrap;
 	&__item{
+		height: 50px;
 		width: 260px;
-		background-color: #267df4;
-		border: 1px solid transparent;
-		padding-top: 12px;
-		padding-bottom: 12px;
-		padding-left: 15px;
 		text-align: center;
-		border-radius: 30px;
 		&_learn{
 			width: 200px;
-			background-color: #ffffff;
-			border: 2px solid #dbdddf;
-			border-radius: 30px;
 		}
 	}
-	&__link{
-		text-decoration: none;
+}	
+
+.button{
+	display: inline-block;
+	background-color: #ffffff;
+	text-decoration: none;
+	font-family: $font;
+	font-weight: 400;
+	font-size: 24px;
+	color: $headerColor;
+	border: 2px solid #dbdddf;
+	padding: 12px 33px; 
+	border-radius: 30px;
+	&_primary{
+		border: 1px solid transparent;
+		background-color: #267df4;
 		color: #ffffff;
-		font-family: $font;
-		font-weight: 400;
-		font-size: 26px;
-		&_learn{
-			color: $headerColor;
-		}
 	}
 	&__illustration{
-		padding-left: 47px;
+		padding-left: 10px;
+	}
+	&__icon{
+		padding-right:  12px;
+	}
+	&_secondary{
+		background-color: transparent;
+		padding: 18px 25px;
+		border: 2px solid #dbdddf;
+		border-radius: 30px;
+		font-size: 20px;
+	}
+	&__img{
+		padding: 0 20px;
+	}
+	&_success{
+		background-color: #6fc754;
+		border: 1px solid transparent;
+		color: #ffffff;
+		font-size: 14px;
+
 	}
 }
 
@@ -306,21 +316,7 @@
 		background: #f5f5f8;
 	}
 	&__button{
-		border: 1px solid transparent;
-		border-radius: 30px;
-		background-color: #6fc754;
 		text-align: center;
-		padding: 10px 12px;
-	}
-	&__link{
-		text-decoration: none;
-		color: #ffffff;
-		font-family: $font;
-		font-weight: 400;
-		font-size: 14px;
-	}
-	&__illustration{
-		padding-left: 20px;
 	}
 }
 
@@ -473,21 +469,11 @@
 	width: 500px;
 	border: 2px solid #dddde0;
 	border-radius: 30px;
-	padding: 19px 3px 17px 15px;
+	padding: 3px;
+	overflow: hidden;
 	&__input{
 		background-color: #ffffff;
 		border: none;
-	}
-	&__link{
-		text-decoration: none;
-		background-color: #6fc754;
-		color: #ffffff;
-		font-family: $font;
-		font-weight: 700;
-		font-size: 16px;
-		border: 1px solid transparent;
-		border-radius: 30px;
-		padding: 14px 30px;
 	}
 }
 
@@ -569,6 +555,7 @@
 		color: #3c86f4;
 	}
 }
+
 .creator{
 	height: 70px;
 	width: 250px;
@@ -582,4 +569,4 @@
 		font-weight: 700;
 		vertical-align: center;
 	}
-}
+}}
