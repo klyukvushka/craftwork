@@ -1,6 +1,6 @@
-@import url('https://fonts.googleapis.com/css?family=Lato:300,400,700|Varela+Round');
 @import "variables";
 @import "normalize";
+@import "mixins";
 
 html {
   box-sizing: border-box;
@@ -13,15 +13,19 @@ html {
   box-sizing: inherit;
 }
 
+.container{
+	margin: $margin;
+	max-width: $max-width;
+	width: $width;
+}
+
 .header{
 	background: url(../images/iphone.png),url(../images/background.jpg);
 	background-position:  center bottom, center center;
 	background-repeat: no-repeat, no-repeat;
 	background-size: auto, cover; 
     &__container{
-		margin: $margin;
-		max-width: $max-width;
-		width: $width;
+		@extend .container;
 		height: 1000px;
 		padding-left: 25px;
 		padding-right: 25px;
@@ -29,9 +33,9 @@ html {
 	&__title{
 		padding-top: 80px;
 		text-align: center;
-		font-family: $bigTitle;
-		font-size: 62px;
 		color: $headerColor;
+		font-family: $bigTitle;;
+		font-size: 62px;
 	}
 	&__description{
 		padding-top: 40px;
@@ -39,26 +43,25 @@ html {
 		color: $textColor;
 		text-align: center;
 		font-family: $font;
-		font-size: 22px;
 		font-weight: 400;
 		line-height: 1.5;
+		font-size: 22px;
 	}
 	&__button{
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		
 	}
 }
 .menu{
 	padding-top: 40px;
 	display: flex;
-	justify-content: space-between;
+	justify-content: space-between;;
 	align-items: center;
 	&__wrapper{
 		display: flex;
+	justify-content: space-between;;
 		flex-wrap: nowrap;
-		justify-content: space-between;
 		width: 400px;
 	}
 	&__items{
@@ -72,8 +75,8 @@ html {
 	&__content{
 		width: 400px;
 		display: flex;
+		justify-content: space-between;;
 		flex-wrap: nowrap;
-		justify-content: space-between;
 		align-items: center;
 	}
 	&__parts{
@@ -88,8 +91,9 @@ html {
 	&__link{
 		text-align: center;
 		font-family: $font;
-		font-size: 20px;
 		font-weight: 400;
+		line-height: 0;
+		font-size: 20px;
 		text-decoration: none;
 		color: $headerColor;
 		&_help{
@@ -100,21 +104,17 @@ html {
 .feature{
 	background-color: $background;
 	&__container{
-		margin: $margin;
-		max-width: $max-width;
-		width: $width;
+		@extend .container;
 		height: 560px;
-		padding-top: 120px;
-		padding-left: 25px;
-		padding-right: 25px;
+		padding: 120px 25px 0 25px;
 		display: flex;
-		justify-content: space-between;
+		justify-content: space-between;;
 		font-family: $font;
 		font-weight: 400;
+		line-height: 1.5;
 		font-size: 18px;
 		color: $textColor;
 		border-bottom: 2px solid #f4f4f4;
-		line-height: 1.5;
 	}
 	&__content{
 		width: 520px;
@@ -139,9 +139,7 @@ html {
 	background-size: auto, auto;
 	&__container{
 		padding-top: 150px;
-		margin: $margin;
-		max-width: $max-width;
-		width: $width;
+		@extend .container;
 		height: 900px;
 		padding-left: 25px;
 		padding-right: 25px;
@@ -154,15 +152,15 @@ html {
 		width: 600px;
 		font-family: $font;
 		font-weight: 400;
+		line-height: 1.5;
 		font-size: 22px;
 		color: $textColor;
-		line-height: 1.5;
 	}
 	&__title{
 		padding-bottom: 40px;
+		color: $headerColor;
 		font-family: $bigTitle;
 		font-size: 42px;
-		color: $headerColor;
 	}
 }
 .buttons{
@@ -173,21 +171,10 @@ html {
 }	
 
 .button{
-	display: inline-block;
-	background-color: #ffffff;
-	text-decoration: none;
-	font-family: $font;
-	font-weight: 400;
-	font-size: 24px;
-	color: $headerColor;
-	border: 2px solid #dbdddf;
+	@include button(#ffffff, $headerColor, 2px solid #dbdddf, 24px);
 	padding: 12px 33px; 
-	border-radius: 30px;
-	text-align: center;
 	&_primary{
-		border: 1px solid transparent;
-		background-color: #267df4;
-		color: #ffffff;
+		@include button(#267df4, #ffffff, 1px solid transparent, 24px);
 	}
 	&__illustration{
 		padding-left: 10px;
@@ -196,25 +183,18 @@ html {
 		padding-right:  12px;
 	}
 	&_secondary{
-		background-color: transparent;
+		@include button(transparent, #ffffff, 2px solid #dbdddf, 20px);
 		padding: 18px 25px;
-		border: 2px solid #dbdddf;
-		border-radius: 30px;
-		font-size: 20px;
 	}
 	&__img{
 		padding: 0 20px;
 	}
 	&_success{
-		background-color: #6fc754;
-		border: 1px solid transparent;
-		color: #ffffff;
-		font-size: 14px;
+		@include button(#6fc754, #ffffff, 1px solid transparent, 14px);
+	
 	}
 	&_info{
-	font-size: 16px;
-	color: #c2c2c3;
-	background-color: transparent;
+		@include button(transparent, #c2c2c3, 2px solid #dbdddf, 16px);
 	&:hover{
 		color: $headerColor;
 		background-color: #ffffff;
@@ -229,9 +209,7 @@ html {
 	background-repeat: no-repeat, repeat;
 	background-size: auto, auto;
 	&__container{
-		margin: $margin;
-		max-width: $max-width;
-		width: $width;
+		@extend .container;
 		height: 700px;
 		padding-left: 25px;
 		padding-right: 25px;
@@ -241,14 +219,14 @@ html {
 		width: 560px;
 		font-family: $font;
 		font-weight: 400;
+		line-height: 1.5;
 		font-size: 22px;
 		color: $textColor;
-		line-height: 1.5; 
 	}
 	&__title{
-		font-family: $bigTitle;
-		font-size: 42px;
 		color: $headerColor;
+		font-family: $bigTitle;;
+		font-size: 42px;
 	}
 
 }
@@ -270,9 +248,7 @@ html {
 	background-color: #f5f5f8;
 	&__container{
 		padding-top: 50px;
-		margin: $margin;
-		max-width: $max-width;
-		width: $width;
+		@extend .container;
 		height: 900px;
 		padding-left: 25px;
 		padding-right: 25px;
@@ -280,9 +256,9 @@ html {
 	&__title{
 		padding-bottom: 20px;
 		text-align: center;
-		font-family: $bigTitle;
-		font-size: 42px;
 		color: $headerColor;
+		font-family: $bigTitle;;
+		font-size: 42px;
 	}
 	&__border{
 		margin: $margin;
@@ -306,6 +282,7 @@ html {
 		text-transform: uppercase;
 		font-family: $font;
 		font-weight: 400;
+		line-height: 1.5;
 		font-size: 14px;
 		color: $textColor;
 		text-align: center;
@@ -315,9 +292,9 @@ html {
 		}
 	}
 	&__title{
-		font-family: $bigTitle;
-		font-size: 42px;
 		color: $headerColor;
+		font-family: $bigTitle;;
+		font-size: 42px;
 		text-align: center;
 	}
 	&__icon{
@@ -329,8 +306,7 @@ html {
 	margin: $margin;
 	width: 400px;
 	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
+	justify-content: space-between;;
 	flex-wrap: nowrap;
 	border: 2px solid #dddde0;
 	border-radius: 30px;
@@ -347,9 +323,7 @@ html {
 .review{
 	background-color: #ffffff;
 	&__container{
-		margin: $margin;
-		max-width: $max-width;
-		width: $width;
+		@extend .container;
 		height: 700px;
 		padding-left: 25px;
 		padding-right: 25px;
@@ -364,11 +338,11 @@ html {
 		width: 600px;
 		margin: 0 auto;
 		font-family: $font;
-		font-size: 20px;
 		font-weight: 400;
+		line-height: 1.5;
+		font-size: 20px;
 		color: $textColor;
 		text-align: center;
-		line-height: 1.5;
 		padding-bottom: 30px;
 	}
 	&__stars{
@@ -389,33 +363,33 @@ html {
 .choice{
 	background-color: #f5f5f8;
 	&__container{
-		margin: $margin;
-		max-width: $max-width;
-		width: $width;
+		@extend .container;
 		height: 700px;
 		padding-left: 25px;
 		padding-right: 25px;
 	}
 	&__title{
 		padding-top: 100px;
-		font-family: $bigTitle;
-		font-size: 42px;
 		color: $headerColor;
+		font-family: $bigTitle;;
+		font-size: 42px;
 	}
 	&__description{
 		padding-top: 70px;
 		width: 400px;
 		color: $textColor;
 		font-family: $font;
-		font-size: 18px;
 		font-weight: 400;
+		line-height: 1.5;
+		font-size: 18px;
 	}
 	&__question{
 		padding-top: 50px;
 		color: $textColor;
 		font-family: $font;
-		font-size: 14px;
 		font-weight: 400;
+		line-height: 1.5;
+		font-size: 14px;
 	}
 	&__link{
 		color: #3c86f4;
@@ -434,7 +408,7 @@ html {
 	&__box{
 		width: 300px;
 		display: flex;
-		justify-content: space-between;
+		justify-content: space-between;;
 		border: 2px solid #dddde0;
 		border-radius: 30px;
 		padding: 2px;
@@ -444,13 +418,10 @@ html {
 	}
 }
 
-
 .subscribe{
 	background-color: #ffffff;
 	&__container{
-		margin: $margin;
-		max-width: $max-width;
-		width: $width;
+		@extend .container;
 		height: 350px;
 		padding-left: 25px;
 		padding-right: 25px;
@@ -459,9 +430,9 @@ html {
 	&__title{
 		padding-top: 50px;
 		text-align: center;
-		font-family: $bigTitle;
-		font-size: 42px;
 		color: $headerColor;
+		font-family: $bigTitle;;
+		font-size: 42px;
 	}
 	&__spam{
 		padding-top: 30px;
@@ -471,13 +442,14 @@ html {
 		color: $textColor;
 		font-family: $font;
 		font-weight: 400;
+		line-height: 1.5;
 		font-size: 14px;
 	}
 }
 .content{
 	margin: $margin;
 	display: flex;
-	justify-content: space-between;
+	justify-content: space-between;;
 	width: 500px;
 	border: 2px solid #dddde0;
 	border-radius: 30px;
@@ -492,15 +464,11 @@ html {
 .footer{
 	background-color: #ffffff;
 	&__container{
-		padding-left: 25px;
-		padding-right: 25px;
-		padding-top: 80px;
-		margin: $margin;
-		max-width: $max-width;
-		width: $width;
+		padding: 80px 25px 0 25px;
+		@extend .container;
 		height: 400px;
 		display: flex;
-		justify-content: space-between;
+		justify-content: space-between;;
 		border-bottom: 1px solid #dddde0;
 	}
 }
@@ -509,9 +477,9 @@ html {
 		width: 255px;
 		font-family: $font;
 		font-weight: 400;
-		font-size: 14px;
-		color: $textColor;
 		line-height: 1.5;
+		font-size: 16px;
+		color: $textColor;
 		&__download{
 		padding-top: 25px;
 	}
@@ -521,17 +489,16 @@ html {
 	&__items{
 		list-style: none;
 		display: flex;
-		justify-content: space-between;
+		justify-content: space-between;;
 		padding: 0;
 	}
 }
 .information{
-	
 	&__title{
 		font-weight: 700;
 		font-size: 12px;
 		text-transform: uppercase;
-		color: $headerColor
+		color: $headerColor;
 	}
 }
 .list{
@@ -539,9 +506,10 @@ html {
 	padding-left: 0;
 	&__link{
 		text-decoration: none;
-		font-family: $font;
 		color: $textColor;
+		font-family: $font;
 		font-weight: 400;
+		line-height: 1.5;
 		font-size: 16px;
 		line-height: 2;
 	}
@@ -549,19 +517,16 @@ html {
 .copyrights{
 	background-color: #ffffff;
 	&__container{
-		margin: $margin;
-		max-width: $max-width;
-		width: $width;
-		padding-top: 20px;
-		padding-left: 25px;
-		padding-right: 25px;
+		@extend .container;
+		padding: 20px 25px 0 25px;
 		display: flex;
-		justify-content: space-between;
+		justify-content: space-between;;
 		align-items: center;
 	}
 	&__copy{
 		font-family: $font;
 		font-weight: 400;
+		line-height: 1.5;
 		font-size: 14px;
 		color: $textColor;
 	}
@@ -574,7 +539,7 @@ html {
 	height: 70px;
 	width: 250px;
 	display: flex;
-	justify-content: space-between;
+	justify-content: space-between;;
 	align-items: center;
 	&__title{
 		margin: 0;
