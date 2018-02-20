@@ -191,10 +191,9 @@ html {
 	}
 	&_info{
 		@include button(transparent, #c2c2c3, 2px solid #dbdddf, 16px);
-		&:hover{
-		@include hover($headerColor, #ffffff, 4px 5px 7px);
+		@include buttonStates($headerColor, #ffffff, 4px 5px 7px);
 	}
-	}
+	
 }
 
 .world{
