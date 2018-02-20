@@ -12,3 +12,15 @@
 	border: $border;
 	font-size: $font-size;
 	}
+
+@mixin hover($color, $background-color, $box-shadow){
+	color: $color;
+	background-color: $background-color;
+	box-shadow: $box-shadow;
+}
+
+@mixin fontTitle ($font-family, $color, $font-size){
+	font-family: $font-family;
+	color: $color;
+	font-size: $font-size;
+}

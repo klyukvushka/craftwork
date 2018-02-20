@@ -415,8 +415,8 @@ html {
   .header__title {
     padding-top: 80px;
     text-align: center;
-    color: #26272d;
     font-family: "Valera Round", sans-serif;
+    color: #26272d;
     font-size: 62px; }
   .header__description {
     padding-top: 40px;
@@ -521,8 +521,8 @@ html {
     color: #8c8f94; }
   .protection__title {
     padding-bottom: 40px;
-    color: #26272d;
     font-family: "Valera Round", sans-serif;
+    color: #26272d;
     font-size: 42px; }
 
 .buttons {
@@ -571,7 +571,7 @@ html {
     border-radius: 30px;
     text-align: center;
     background-color: transparent;
-    color: #ffffff;
+    color: #26272d;
     border: 2px solid #dbdddf;
     font-size: 20px;
     padding: 18px 25px; }
@@ -626,8 +626,8 @@ html {
     font-size: 22px;
     color: #8c8f94; }
   .world__title {
-    color: #26272d;
     font-family: "Valera Round", sans-serif;
+    color: #26272d;
     font-size: 42px; }
 
 .partners__title {
@@ -651,8 +651,8 @@ html {
   .interface__title {
     padding-bottom: 20px;
     text-align: center;
-    color: #26272d;
     font-family: "Valera Round", sans-serif;
+    color: #26272d;
     font-size: 42px; }
   .interface__border {
     margin: 0 auto;
@@ -681,8 +681,8 @@ html {
     padding: 40px 0 30px; }
 
 .install__title {
-  color: #26272d;
   font-family: "Valera Round", sans-serif;
+  color: #26272d;
   font-size: 42px;
   text-align: center; }
 
@@ -747,8 +747,8 @@ html {
     padding-right: 25px; }
   .choice__title {
     padding-top: 100px;
-    color: #26272d;
     font-family: "Valera Round", sans-serif;
+    color: #26272d;
     font-size: 42px; }
   .choice__description {
     padding-top: 70px;
@@ -797,8 +797,8 @@ html {
   .subscribe__title {
     padding-top: 50px;
     text-align: center;
-    color: #26272d;
     font-family: "Valera Round", sans-serif;
+    color: #26272d;
     font-size: 42px; }
   .subscribe__spam {
     padding-top: 30px;
@@ -852,6 +852,7 @@ html {
     padding: 0; }
 
 .information__title {
+  font-family: "Lato", sans-serif;
   font-weight: 700;
   font-size: 12px;
   text-transform: uppercase;
