@@ -29,18 +29,34 @@ html {
 		height: 1000px;
 		padding-left: 25px;
 		padding-right: 25px;
-		@media screen and (max-width: 576px){
+		@include phone {
 		background: url(../images/background.jpg), no-repeat;
 		height: 400px;
 	}
+		@include tablet-portrait {
+			height: 800px;
+			background: url(../images/background.jpg), no-repeat;
+		}
+		@include tablet-landscape {
+			height: 700px;
+			background-color: #ffffff;
+		}
 	}
 	&__title{
 		padding-top: 80px;
 		text-align: center;
 		@include fontTitle ($bigTitle, $headerColor, 62px);
-		@media screen and (max-width: 576px){
+		@include phone {
 			font-size: 26px;
 			padding-top: 35px;
+		}
+		@include tablet-portrait {
+			font-size: 32px;
+			padding-top: 40px;
+		}
+		@include tablet-landscape {
+			font-size: 46px;
+			padding-top: 55px;
 		}
 	}
 	&__description{
@@ -52,7 +68,7 @@ html {
 		font-weight: 400;
 		line-height: 1.5;
 		font-size: 22px;
-		@media screen and (max-width: 576px){
+		@include phone {
 			font-size: 14px;
 			padding-top: 20px;
 		}
@@ -73,8 +89,11 @@ html {
 		justify-content: space-between;;
 		flex-wrap: nowrap;
 		width: 400px;
-		@media screen and (max-width: 576px){
+		@include phone {
 			width: 40px;
+		}
+		@include tablet-portrait {
+			width: 70px;
 		}
 	}
 	&__items{
@@ -84,7 +103,10 @@ html {
 		display: flex;
 		justify-content: space-around;
 		width: 400px;
-		@media screen and (max-width: 576px){
+		@include phone {
+			display: none;
+		}
+		@include tablet-portrait {
 			display: none;
 		}
 	}
@@ -94,8 +116,11 @@ html {
 		justify-content: space-between;;
 		flex-wrap: nowrap;
 		align-items: center;
-		@media screen and (max-width: 576px){
+		@include phone {
 			width: 100px;
+		}
+		@include tablet-portrait {
+			width: 200px;
 		}
 	}
 	&__parts{
@@ -105,7 +130,10 @@ html {
 		padding-left: 0;
 		display: flex;
 		justify-content: space-around;
-		@media screen and (max-width: 576px){
+		@include phone {
+			display: none;
+		}
+		@include tablet-portrait {
 			display: none;
 		}
 	}
@@ -137,7 +165,7 @@ html {
 		font-size: 18px;
 		color: $textColor;
 		border-bottom: 2px solid #f4f4f4;
-		@media screen and (max-width: 576px) {
+		@include phone  {
 			display: flex;
 			flex-direction: column;
 			font-size: 14px;
@@ -147,13 +175,13 @@ html {
 	}
 	&__content{
 		width: 520px;
-		@media screen and (max-width: 576px){
+		@include phone {
 			width: 400px;
 		}
 	}
 	&__illustration{
 		padding-bottom: 40px;
-			@media screen and (max-width: 576px) {
+			@include phone  {
 			padding-bottom: 20px;
 			width: 40px;
 			height: 55px;
@@ -166,9 +194,6 @@ html {
 		font-weight: 300;
 		font-size: 26px;
 		color: $headerColor;
-		@media  screen and (max-width: 576px) {
-			font-size: 16px;
-		}
 	}
 }
 
@@ -187,13 +212,6 @@ html {
 		flex-direction: column;
 		justify-content: flex-start;
 		align-items: flex-end;
-		@media  screen and (max-width: 576px) {
-			background-color: #ffffff;
-			display: flex;
-			flex-direction: row;
-			padding-top: 10px;
-			height: 370px;
-		}
 	}
 	&__content{
 		width: 600px;
@@ -202,16 +220,11 @@ html {
 		line-height: 1.5;
 		font-size: 22px;
 		color: $textColor;
-		@media  screen and (max-width: 576px) {
-			font-size: 14px;
-			text-align: left;
-			width: 450px;
-		}
 	}
 	&__title{
 		padding-bottom: 40px;
 		@include fontTitle ($bigTitle, $headerColor, 42px);
-		@media screen and (max-width: 576px){
+		@include phone {
 			font-size: 26px;
 			padding-bottom: 20px;
 		}
@@ -236,7 +249,7 @@ html {
 	}
 	&__icon{
 		padding-right:  12px;
-		@media screen  and (max-width: 576px) {
+		@include phone  {
 		padding-right: 6px;
 			}
 	}
@@ -255,7 +268,7 @@ html {
 		@include button(transparent, #c2c2c3, 2px solid #dbdddf, 16px);
 		@include buttonStates($headerColor, #ffffff, 4px 5px 7px);
 	}
-	@media screen  and (max-width: 576px) {
+	@include phone  {
 		padding: 10px 13px;
 		font-size: 12px;
 	}

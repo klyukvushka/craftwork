@@ -412,20 +412,36 @@ html {
     height: 1000px;
     padding-left: 25px;
     padding-right: 25px; }
-    @media screen and (max-width: 576px) {
+    @media screen and (max-width: 480px) {
       .header__container {
         background: url(../images/background.jpg), no-repeat;
         height: 400px; } }
+    @media screen and (max-width: 767px) {
+      .header__container {
+        height: 800px;
+        background: url(../images/background.jpg), no-repeat; } }
+    @media screen and (max-width: 991px) {
+      .header__container {
+        height: 700px;
+        background-color: #ffffff; } }
   .header__title {
     padding-top: 80px;
     text-align: center;
     font-family: "Valera Round", sans-serif;
     color: #26272d;
     font-size: 62px; }
-    @media screen and (max-width: 576px) {
+    @media screen and (max-width: 480px) {
       .header__title {
         font-size: 26px;
         padding-top: 35px; } }
+    @media screen and (max-width: 767px) {
+      .header__title {
+        font-size: 32px;
+        padding-top: 40px; } }
+    @media screen and (max-width: 991px) {
+      .header__title {
+        font-size: 46px;
+        padding-top: 55px; } }
   .header__description {
     padding-top: 40px;
     padding-bottom: 40px;
@@ -435,7 +451,7 @@ html {
     font-weight: 400;
     line-height: 1.5;
     font-size: 22px; }
-    @media screen and (max-width: 576px) {
+    @media screen and (max-width: 480px) {
       .header__description {
         font-size: 14px;
         padding-top: 20px; } }
@@ -454,9 +470,12 @@ html {
     justify-content: space-between;
     flex-wrap: nowrap;
     width: 400px; }
-    @media screen and (max-width: 576px) {
+    @media screen and (max-width: 480px) {
       .menu__wrapper {
         width: 40px; } }
+    @media screen and (max-width: 767px) {
+      .menu__wrapper {
+        width: 70px; } }
   .menu__items {
     margin: 0;
     list-style: none;
@@ -464,7 +483,10 @@ html {
     display: flex;
     justify-content: space-around;
     width: 400px; }
-    @media screen and (max-width: 576px) {
+    @media screen and (max-width: 480px) {
+      .menu__items {
+        display: none; } }
+    @media screen and (max-width: 767px) {
       .menu__items {
         display: none; } }
   .menu__content {
@@ -473,9 +495,12 @@ html {
     justify-content: space-between;
     flex-wrap: nowrap;
     align-items: center; }
-    @media screen and (max-width: 576px) {
+    @media screen and (max-width: 480px) {
       .menu__content {
         width: 100px; } }
+    @media screen and (max-width: 767px) {
+      .menu__content {
+        width: 200px; } }
   .menu__parts {
     width: 200px;
     list-style: none;
@@ -483,7 +508,10 @@ html {
     padding-left: 0;
     display: flex;
     justify-content: space-around; }
-    @media screen and (max-width: 576px) {
+    @media screen and (max-width: 480px) {
+      .menu__parts {
+        display: none; } }
+    @media screen and (max-width: 767px) {
       .menu__parts {
         display: none; } }
   .menu__link {
@@ -510,7 +538,7 @@ html {
     font-size: 18px;
     color: #8c8f94;
     border-bottom: 2px solid #f4f4f4; }
-    @media screen and (max-width: 576px) {
+    @media screen and (max-width: 480px) {
       .feature__container {
         display: flex;
         flex-direction: column;
@@ -519,12 +547,12 @@ html {
         text-align: left; } }
   .feature__content {
     width: 520px; }
-    @media screen and (max-width: 576px) {
+    @media screen and (max-width: 480px) {
       .feature__content {
         width: 400px; } }
   .feature__illustration {
     padding-bottom: 40px; }
-    @media screen and (max-width: 576px) {
+    @media screen and (max-width: 480px) {
       .feature__illustration {
         padding-bottom: 20px;
         width: 40px;
@@ -536,9 +564,6 @@ html {
     font-weight: 300;
     font-size: 26px;
     color: #26272d; }
-    @media screen and (max-width: 576px) {
-      .feature__title {
-        font-size: 16px; } }
 
 .protection {
   background: url(../images/iphone_bck.png), #ffffff;
@@ -554,13 +579,6 @@ html {
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-end; }
-    @media screen and (max-width: 576px) {
-      .protection__container {
-        background-color: #ffffff;
-        display: flex;
-        flex-direction: row;
-        padding-top: 10px;
-        height: 370px; } }
   .protection__content {
     width: 600px;
     font-family: "Lato", sans-serif;
@@ -568,17 +586,12 @@ html {
     line-height: 1.5;
     font-size: 22px;
     color: #8c8f94; }
-    @media screen and (max-width: 576px) {
-      .protection__content {
-        font-size: 14px;
-        text-align: left;
-        width: 450px; } }
   .protection__title {
     padding-bottom: 40px;
     font-family: "Valera Round", sans-serif;
     color: #26272d;
     font-size: 42px; }
-    @media screen and (max-width: 576px) {
+    @media screen and (max-width: 480px) {
       .protection__title {
         font-size: 26px;
         padding-bottom: 20px; } }
@@ -620,7 +633,7 @@ html {
     padding-left: 10px; }
   .button__icon {
     padding-right: 12px; }
-    @media screen and (max-width: 576px) {
+    @media screen and (max-width: 480px) {
       .button__icon {
         padding-right: 6px; } }
   .button_secondary {
@@ -671,7 +684,7 @@ html {
       box-shadow: 4px 5px 7px; }
     .button_info:active {
       background-color: #999999; }
-  @media screen and (max-width: 576px) {
+  @media screen and (max-width: 480px) {
     .button {
       padding: 10px 13px;
       font-size: 12px; } }
