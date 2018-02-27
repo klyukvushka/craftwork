@@ -89,11 +89,11 @@ html {
 		justify-content: space-between;;
 		flex-wrap: nowrap;
 		width: 400px;
-		@include phone {
-			width: 40px;
-		}
 		@include tablet-portrait {
-			width: 70px;
+			width: auto;
+		}
+		@include phone {
+			width: auto;
 		}
 	}
 	&__items{
@@ -121,7 +121,7 @@ html {
 			width: 200px;
 		}
 		@include phone {
-			width: 100px;
+			width: auto;
 		}
 	}
 	&__parts{
@@ -178,7 +178,7 @@ html {
 	&__content{
 		width: 520px;
 		@include phone {
-			width: 100%;
+			width: auto;
 		}
 	}
 	&__illustration{
@@ -233,7 +233,7 @@ html {
 		font-size: 22px;
 		color: $textColor;
 		@include phone {
-			width: 100%;
+			width: auto;
 			font-size: 17px;
 			text-align: center;
 		}
@@ -253,7 +253,7 @@ html {
 	padding-bottom: 20px;
 	@include phone {
 		display: block;
-		width: 100%;
+		width: auto;
 	}
 	&:first-child{
 		margin-right: 40px;
@@ -328,7 +328,7 @@ html {
 		font-size: 22px;
 		color: $textColor;
 		@include phone {
-			width: 100%;
+			width: auto;
 			font-size: 17px;
 			padding-top: 20px;
 		}
@@ -356,6 +356,12 @@ html {
 	}
 	&__icon{
 		padding-right: 35px;
+		@include phone {
+			height: 30px;
+		}
+		&_second {
+			padding-right: 0;
+		}
 	}
 }
 
@@ -447,7 +453,7 @@ html {
 	padding: 3px;
 	overflow: hidden;
 	@include phone {
-		width: 300px;
+		width: auto;
 		}
 	&__email{
 		width: 200px;
@@ -489,7 +495,7 @@ html {
 		padding-bottom: 30px;
 		@include phone {
 		font-size: 16px;
-		width: 100%;
+		width: auto;
 		}
 	}
 	&__stars{
@@ -539,7 +545,7 @@ html {
 		padding-top: 20px;
 		font-size: 16px;
 		text-align: center;
-		width: 100%;
+		width: auto;
 		}
 	}
 	&__question{
@@ -579,7 +585,7 @@ html {
 		border-radius: 30px;
 		padding: 2px;
 		@include phone {
-		width: 200px;
+		width: auto;
 		margin: 0 auto;
 		}
 	&_element{
@@ -619,7 +625,7 @@ html {
 		line-height: 1.5;
 		font-size: 14px;
 		@include phone {
-			width: 100%;
+			width: auto;
 		}
 	}
 }
@@ -633,7 +639,7 @@ html {
 	padding: 3px;
 	overflow: hidden;
 	@include phone {
-		width: 300px;
+		width: auto;
 	}
 	&__input{
 		background-color: #ffffff;
@@ -658,7 +664,7 @@ html {
 	}
 	&__wrapper {
 		@include phone {
-			width: 100%;
+			width: auto;
 			display: flex;
 			justify-content: space-between;
 		}
@@ -672,32 +678,37 @@ html {
 		line-height: 1.5;
 		font-size: 16px;
 		color: $textColor;
-
+		@include phone {
+			width: auto;
+		}
 		&__discription{
 			@include phone {
 			display: none;
 			}
 		}
-		
-		&__download{
+		&__download {
 		padding-top: 25px;
-	}
+		@include phone {
+			padding: 0;
+			}
+		}
+		&__illustration {
+			@include phone {
+				display: none;
+			}
+		}
 }
 .social{
 	padding-top: 30px;
 	&__items{
 		list-style: none;
 		display: flex;
-		justify-content: space-between;;
+		justify-content: space-between;
 		padding: 0;
 	}
 }
 
 .information{
-	@include phone {
-
-		
-	}
 	&__title{
 		font-family: $font;
 		font-weight: 700;
@@ -756,5 +767,8 @@ html {
 		text-transform: uppercase;
 		font-weight: 700;
 		vertical-align: center;
+		@include phone {
+			display: none;
+		}
 	}
 }
