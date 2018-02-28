@@ -30,8 +30,10 @@ html {
 		padding-left: 25px;
 		padding-right: 25px;
 		@include tablet-landscape {
-			height: 700px;
-			background-color: #ffffff;
+			height: auto;
+			background: url(../images/background.jpg), no-repeat;
+			background-size: auto;
+			padding-bottom: 20px;
 		}
 		@include tablet-portrait {
 			height: auto;
@@ -70,6 +72,9 @@ html {
 		font-weight: 400;
 		line-height: 1.5;
 		font-size: 22px;
+		@include tablet-landscape {
+			font-size: 20px;
+		}
 		@include tablet-portrait {
 			font-size: 18px;
 			padding-top: 30px;
@@ -95,6 +100,9 @@ html {
 		justify-content: space-between;;
 		flex-wrap: nowrap;
 		width: 400px;
+		@include tablet-landscape {
+			width: auto;
+		}
 		@include tablet-portrait {
 			width: auto;
 		}
@@ -109,6 +117,9 @@ html {
 		display: flex;
 		justify-content: space-around;
 		width: 400px;
+		@include tablet-landscape {
+			display: none;
+		}
 		@include phone {
 			display: none;
 		}
@@ -122,6 +133,9 @@ html {
 		justify-content: space-between;;
 		flex-wrap: nowrap;
 		align-items: center;
+		@include tablet-landscape {
+			width: auto;
+		}
 		@include tablet-portrait {
 			width: auto;
 		}
@@ -152,6 +166,9 @@ html {
 		font-size: 20px;
 		text-decoration: none;
 		color: $headerColor;
+		@include tablet-landscape {
+			font-size: 16px;
+		}
 		&_help{
 		color: $textColor;}
 	}
@@ -171,6 +188,15 @@ html {
 		font-size: 18px;
 		color: $textColor;
 		border-bottom: 2px solid #f4f4f4;
+		@include tablet-landscape {
+			height: auto;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			padding-top: 60px;
+			padding-bottom: 20px;
+		}
 		@include tablet-portrait {
 			height: auto;
 			font-size: 16px;
@@ -191,6 +217,7 @@ html {
 	}
 	&__content{
 		width: 520px;
+
 		@include tablet-portrait {
 			width: auto;
 		}
@@ -243,6 +270,13 @@ html {
 		flex-direction: column;
 		justify-content: flex-start;
 		align-items: flex-end;
+		@include tablet-landscape {
+			height: auto;
+			background-color: #ffffff;
+			padding-top: 50px;
+			flex-direction: row;
+			padding-bottom: 20px;
+		}
 		@include tablet-portrait {
 			height: auto;
 			background-color: #ffffff;
@@ -263,6 +297,11 @@ html {
 		line-height: 1.5;
 		font-size: 22px;
 		color: $textColor;
+		@include tablet-landscape {
+			width: auto;
+			font-size: 20px;
+			text-align: center;
+		}
 		@include tablet-portrait {
 			width: auto;
 			font-size: 19px;
@@ -277,6 +316,9 @@ html {
 	&__title{
 		padding-bottom: 40px;
 		@include fontTitle ($bigTitle, $headerColor, 42px);
+		@include tablet-landscape {
+			font-size: 36px;
+		}
 		@include tablet-portrait {
 			font-size: 32px;
 			padding-bottom: 25px;
@@ -291,13 +333,15 @@ html {
 	width: 600px;
 	padding-top: 40px;
 	padding-bottom: 20px;
+	@include tablet-landscape {
+			width: auto;
+			margin: 0;
+		}
 	@include phone {
 		display: block;
 		width: auto;
 	}
-	&:first-child{
-		margin-right: 40px;
-	}
+	
 }	
 
 .button{
@@ -346,6 +390,10 @@ html {
 		@include button(transparent, #c2c2c3, 2px solid #dbdddf, 16px);
 		@include buttonStates($headerColor, #ffffff, 4px 5px 7px);
 	}
+	@include tablet-landscape {
+		padding: 10px 18px;
+		font-size: 16px;
+		}
 	@include tablet-portrait {
 		padding: 10px 15px;
 		font-size: 14px;
@@ -367,6 +415,11 @@ html {
 		height: 700px;
 		padding-left: 25px;
 		padding-right: 25px;
+		@include tablet-landscape {
+			height: auto;
+			background-color: #ffffff;
+			padding-bottom: 20px;
+		}
 		@include tablet-portrait {
 			height: auto;
 			background-color: #ffffff;
@@ -384,6 +437,10 @@ html {
 		line-height: 1.5;
 		font-size: 22px;
 		color: $textColor;
+		@include tablet-landscape {
+			width: auto;
+			font-size: 20px;
+		}
 		@include tablet-portrait {
 			width: auto;
 			padding-top: 28px;
@@ -397,6 +454,10 @@ html {
 	}
 	&__title{
 		@include fontTitle ($bigTitle, $headerColor, 42px);
+		@include tablet-landscape {
+			font-size: 36px;
+			text-align: center;
+		}
 		@include tablet-portrait {
 			font-size: 32px;
 		}
@@ -427,6 +488,9 @@ html {
 			padding-right: 0;
 		}
 	}
+	@include tablet-landscape {
+	 	text-align: center;
+		}
 }
 
 .interface{
@@ -437,6 +501,11 @@ html {
 		height: 900px;
 		padding-left: 25px;
 		padding-right: 25px;
+		@include tablet-landscape {
+			height: auto;
+			padding-top: 35px;
+			padding-bottom: 20px;
+		}
 		@include tablet-portrait {
 			height: auto;
 			padding-top: 35px;
@@ -451,6 +520,9 @@ html {
 		padding-bottom: 20px;
 		text-align: center;
 		@include fontTitle ($bigTitle, $headerColor, 42px);
+		@include tablet-landscape {
+			font-size: 36px;
+		}
 		@include tablet-portrait {
 			font-size: 32px;
 			padding-bottom: 10px;
@@ -506,6 +578,9 @@ html {
 	&__title{
 		@include fontTitle ($bigTitle, $headerColor, 42px);
 		text-align: center;
+		@include tablet-landscape {
+			font-size: 36px;
+		}
 		@include tablet-portrait {
 			font-size: 32px;
 		}
@@ -552,6 +627,10 @@ html {
 		height: 700px;
 		padding-left: 25px;
 		padding-right: 25px;
+		@include tablet-landscape {
+			height: auto;
+			
+		}
 		@include tablet-portrait {
 			height: auto;
 		}
@@ -611,6 +690,10 @@ html {
 		height: 700px;
 		padding-left: 25px;
 		padding-right: 25px;
+		@include tablet-landscape {
+			height: auto;
+			padding-bottom: 20px;
+		}
 		@include tablet-portrait {
 			height: auto;
 			padding-bottom: 20px;
@@ -622,6 +705,11 @@ html {
 	&__title{
 		padding-top: 100px;
 		@include fontTitle ($bigTitle, $headerColor, 42px);
+		@include tablet-landscape {
+			padding-top: 50px;
+			font-size: 36px;
+			text-align: center;
+		}
 		@include tablet-portrait {
 			padding-top: 30px;
 			font-size: 32px;
@@ -640,6 +728,11 @@ html {
 		font-weight: 400;
 		line-height: 1.5;
 		font-size: 18px;
+		@include tablet-landscape {
+			width: auto;
+			padding-top: 30px;
+			text-align: center;
+		}
 		@include tablet-portrait {
 			padding-top: 30px;
 			width: auto;
@@ -658,6 +751,9 @@ html {
 		font-weight: 400;
 		line-height: 1.5;
 		font-size: 14px;
+		@include tablet-landscape {
+			text-align: center;
+		}
 		@include phone {
 		padding-top: 20px;
 		}
@@ -675,6 +771,9 @@ html {
 		color: $headerColor;
 		text-transform: uppercase;
 		padding-bottom: 20px;
+		@include tablet-landscape {
+			text-align: center;
+		}
 		@include tablet-portrait {
 			padding-top: 30px;
 		}
@@ -690,9 +789,12 @@ html {
 		border: 2px solid #dddde0;
 		border-radius: 30px;
 		padding: 2px;
+		@include tablet-landscape {
+			margin: $margin;
+		}
 		@include phone {
 		width: auto;
-		margin: 0 auto;
+		margin: $margin;
 		}
 	&_element{
 		border: none;
@@ -708,6 +810,10 @@ html {
 		padding-left: 25px;
 		padding-right: 25px;
 		border-bottom: 1px solid #dddde0;
+		@include tablet-landscape {
+			height: auto;
+			padding-bottom: 20px;
+		}
 		@include tablet-portrait {
 			height: auto;
 			padding-bottom: 20px;
@@ -720,6 +826,9 @@ html {
 		padding-top: 50px;
 		text-align: center;
 		@include fontTitle ($bigTitle, $headerColor, 42px);
+		@include tablet-landscape {
+			font-size: 36px;
+		}
 		@include tablet-portrait {
 			font-size: 32px;
 		}
@@ -785,6 +894,9 @@ html {
 		}
 	}
 	&__wrapper {
+		flex-grow: 2;
+		display: flex;
+		justify-content: space-around;
 		@include phone {
 			width: auto;
 			display: flex;
@@ -794,6 +906,7 @@ html {
 }
 	
 .contents{
+		padding-top: 12px;
 		width: 255px;
 		font-family: $font;
 		font-weight: 400;
