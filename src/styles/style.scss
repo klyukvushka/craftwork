@@ -270,6 +270,9 @@ html {
 		flex-direction: column;
 		justify-content: flex-start;
 		align-items: flex-end;
+		@include desktop {
+			background-size: 35%, auto;
+		}
 		@include tablet-landscape {
 			height: auto;
 			background-color: #ffffff;
@@ -290,6 +293,7 @@ html {
 			display: block;
 		}
 	}
+
 	&__content{
 		width: 600px;
 		font-family: $font;
@@ -328,11 +332,17 @@ html {
 			padding-bottom: 20px;
 		}
 	}
+	@include desktop {
+		background-size: 45% , auto;
+		}
 }
 .buttons{
 	width: 600px;
 	padding-top: 40px;
 	padding-bottom: 20px;
+	& :first-child {
+		margin-right: 20px;
+	}
 	@include tablet-landscape {
 			width: auto;
 			margin: 0;
@@ -354,7 +364,7 @@ html {
 		}
 	}
 	&__illustration{
-		padding-left: 10px;
+		padding-left: 9px;
 		@include tablet-portrait {
 			height: 9px;
 			padding-left: 8px;
@@ -384,8 +394,11 @@ html {
 	}
 	&_success{
 		@include button(#6fc754, #ffffff, 1px solid transparent, 14px);
-	
+		@include phone {
+		padding: 10px 10px;
 	}
+	}
+
 	&_info{
 		@include button(transparent, #c2c2c3, 2px solid #dbdddf, 16px);
 		@include buttonStates($headerColor, #ffffff, 4px 5px 7px);
@@ -407,7 +420,7 @@ html {
 
 .world{
 	background: url(../images/map.png), #ffffff;
-	background-position: 70% 0, center;
+	background-position: 100%, center;
 	background-repeat: no-repeat, repeat;
 	background-size: auto, auto;
 	&__container{
@@ -465,7 +478,10 @@ html {
 			font-size: 26px;
 		}
 	}
-
+	@include desktop {
+		background-position: 100% top, center;
+			background-size: 55% , auto;
+		}
 }
 .partners{
 	&__title{
@@ -600,23 +616,29 @@ html {
 	}
 }
 .invite{
+	width: 550px;
 	margin: $margin;
-	width: 400px;
 	display: flex;
-	justify-content: space-between;;
-	flex-wrap: nowrap;
+	justify-content: space-between;
 	border: 2px solid #dddde0;
 	border-radius: 30px;
-	padding: 3px;
-	overflow: hidden;
+	padding: 3px 3px 3px 20px;
 	@include phone {
 		width: auto;
+		padding: 0 0 0 17px;
 		}
 	&__email{
-		width: 200px;
-		vertical-align: middle;
 		border: none;
+		padding: 12px 20px;
+		width: 350px;
+		vertical-align: middle;
+		outline: none;
 		background: #f5f5f8;
+		@include phone {
+		width: auto;
+		padding: 10px 10px;
+		font-size: 12px;
+		}
 	}
 }
 
@@ -853,22 +875,31 @@ html {
 }
 .content{
 	margin: $margin;
+	width: 515px;
 	display: flex;
-	justify-content: space-between;;
-	width: 500px;
+	justify-content: space-between;
 	border: 2px solid #dddde0;
 	border-radius: 30px;
-	padding: 3px;
-	overflow: hidden;
+	padding: 3px 3px 3px 25px;
+	text-align: center;
 	@include tablet-portrait {
 		width: 450px;
 	}
 	@include phone {
 		width: auto;
+		padding: 0 0 0 17px;
 	}
 	&__input{
 		background-color: #ffffff;
+		outline: none;
 		border: none;
+		padding: 14px 20px;
+		width: 400px;
+		@include phone {
+		width: auto;
+		padding: 10px 0;
+		font-size: 12px;
+	}
 	}
 }
 
