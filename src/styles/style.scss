@@ -704,6 +704,24 @@ html {
 		color: $headerColor;
 	}
 }
+/*slider styles*/
+
+.review__slider {
+	width: 800px;
+	margin: $margin;
+	padding-top: 60px;
+}
+.slider{
+	&__item {
+		
+	}
+	&__image {
+		height: 190px;
+		width: 190px;
+		border: none;
+		border-radius: 50%;
+	}
+}
 
 .choice{
 	background-color: #f5f5f8;

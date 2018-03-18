@@ -1097,6 +1097,18 @@ html {
     font-size: 12px;
     color: #26272d; }
 
+/*slider styles*/
+.review__slider {
+  width: 800px;
+  margin: 0 auto;
+  padding-top: 60px; }
+
+.slider__image {
+  height: 190px;
+  width: 190px;
+  border: none;
+  border-radius: 50%; }
+
 .choice {
   background-color: #f5f5f8; }
   .choice__container {

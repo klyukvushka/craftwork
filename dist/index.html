@@ -8,6 +8,8 @@
 	<meta name="viewport" content="width=device-width,initial-scale=1">
 	<link rel="stylesheet" href="css/style.css">
 	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700|Varela+Round" rel="stylesheet">
+	<link rel="stylesheet" href="../slick/slick.css">
+	<link rel="stylesheet" href="../slick/slick-theme.css">
 </head>
 <body>
 	<header class="header">
@@ -99,7 +101,18 @@
 		</section>
 		<section class="review">
 			<div class="review__container">
-<!-- слайдер, без понятия как его делать -->	
+<!-- review slider -->
+				<div class="review__slider">
+					<a href="#" class="arrow-prev"><img src="images/prev_arrow.png" alt="" class="arrow-prev__image"></a>
+					<div class="slider">
+						<div class="slider__item"><img src="images/1.jpg" alt="" class="slider__image"></div>
+						<div class="slider__item"><img src="images/2.jpg" alt="" class="slider__image"></div>
+						<div class="slider__item"><img src="images/3.jpg" alt="" class="slider__image"></div>
+						<div class="slider__item"><img src="images/4.jpg" alt="" class="slider__image"></div>
+						<div class="slider__item"><img src="images/5.jpg" alt="" class="slider__image"></div>
+					</div>
+					<a href="#" class="arrow-next"><img src="images/next_arrow.png" alt="" class="arrow-next__image"></a>
+				</div>	
 				<h3 class="review__title">New Providence is the great UI kit </h3>
 				<div class="review__content">“Just then her head struck against the roof of the hall: in fact she was now more than nine feet high, and she at once took up the little golden key and hurried off to the garden door.”</div>
 				<img class="review__stars" src="images/stars.png" alt="">
@@ -189,6 +202,10 @@
 		</div>
 	</div>
 	</footer>
+	<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+	<script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+	<script src="../slick/slick.min.js"></script>
+	<script src="javascript/build.js"></script>
 </body>
 </html>
 
