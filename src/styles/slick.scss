@@ -77,10 +77,8 @@
         display: none;
     }
 
-    display: none;
-
     &.dragging img {
-        pointer-events: none;
+        pointer-events: auto;
     }
 
     .slick-initialized & {
