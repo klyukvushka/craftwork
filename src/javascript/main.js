@@ -27,3 +27,15 @@
       }
     ]
   });
+
+
+  var $btnTop = $(".btn-top")
+  $(window).on("scroll", function(){
+    if ($(window).scrollTop() >= 150){
+      $btnTop.fadeIn();
+    }
+    else {
+      $btnTop.fadeOut();
+    }
+  });
+  

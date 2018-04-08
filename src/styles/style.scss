@@ -173,7 +173,14 @@ html {
 		color: $textColor;}
 	}
 }
-
+.btn-top {
+	display: none;
+	position: fixed;
+	bottom: 50px;
+	left: 50px;
+	z-index: 99;
+	cursor: pointer;
+}
 .feature{
 	background-color: $background;
 	&__container{
