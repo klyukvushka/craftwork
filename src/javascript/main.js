@@ -28,6 +28,19 @@
     ]
   });
 
+  $('.gallery').slick({
+    arrows: false,
+    autoplay: true,
+    infinite: true,
+    autoplaySpeed: 3000,
+    slidesToShow: 5,
+    slidesToScroll: 1,
+    adaptiveHeight: true,
+    variableWidth: true,
+  });
+
+
+
 
   var $btnTop = $(".btn-top")
   $(window).on("scroll", function(){

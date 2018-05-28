@@ -521,9 +521,10 @@ html {
 	&__container{
 		padding-top: 50px;
 		@extend .container;
-		height: 900px;
+		max-width: 1800px;
 		padding-left: 25px;
 		padding-right: 25px;
+		padding-bottom: 50px;
 		@include tablet-landscape {
 			height: auto;
 			padding-top: 35px;
@@ -575,6 +576,7 @@ html {
 
 }
 .install{
+	padding-top: 100px;
 		&__subtitle{
 		margin-bottom: 0;
 		text-transform: uppercase;
@@ -657,9 +659,9 @@ html {
 	background-color: #ffffff;
 	&__container{
 		@extend .container;
-		height: 700px;
 		padding-left: 25px;
 		padding-right: 25px;
+		padding-bottom: 50px;
 		@include tablet-landscape {
 			height: auto;
 			
@@ -715,101 +717,46 @@ html {
 		color: $headerColor;
 	}
 }
-/*slider styles*/
 
-.review__slider {
-	position: relative;
-	width: 800px;
-	margin: $margin;
-	padding-top: 60px;
-	@include tablet-landscape {
-		width: 718px;
-	}
-	@include phone{
-		width: auto;
-	}
-	@include tablet-portrait {
-		width: auto;
-	}
-}
-.slider{
-	&__item {
-		border: none;
-		outline: none;
-	}
-	&__image {
-		height: 190px;
-		width: 190px;
-		border: none;
-		border-radius: 50%;
-		margin: $margin;
-		cursor: pointer;
-		@include tablet-portrait {
-			width: 170px;
-			height: 170px;
-		}
-		@include phone {
-			width: 150px;
-			height: 150px;
-		}
-	}
-	@include tablet-landscape {
-		width: auto;
-	}
-	@include tablet-portrait {
-		width: auto;
-	}
-	@include phone {
-		width: auto;
-	}
-}
-.arrow-prev {
-	position: absolute;
-	top: 50%;
-	left: 0;
-	z-index: 1;
 
-}
-.arrow-next {
-	position: absolute;
-	top: 50%;
-	right: 0;
-}
+
 .choice{
 	background-color: #f5f5f8;
 	&__container{
 		@extend .container;
-		height: 700px;
-		padding-left: 25px;
-		padding-right: 25px;
+		padding: 100px 25px 50px 25px;
+		display: flex;
+		justify-content: space-between;
+		align-items: baseline;
+		flex-wrap: wrap;
 		@include tablet-landscape {
 			height: auto;
 			padding-bottom: 20px;
+			padding-top: 50px;
 		}
 		@include tablet-portrait {
 			height: auto;
 			padding-bottom: 20px;
+			padding-top: 30px;
 		}
 		@include phone {
-		height: auto;
+			padding-top: 20px;
+			height: auto;
 		}
 	}
+	
 	&__title{
-		padding-top: 100px;
 		@include fontTitle ($bigTitle, $headerColor, 42px);
 		@include tablet-landscape {
-			padding-top: 50px;
 			font-size: 36px;
 			text-align: center;
 		}
 		@include tablet-portrait {
-			padding-top: 30px;
-			font-size: 32px;
+		    font-size: 32px;
 		}
 		@include phone {
-		padding-top: 20px;
-		font-size: 26px;
-		text-align: center;
+			font-size: 26px;
+			text-align: center;
 		}
 	}
 	&__description{
@@ -893,7 +840,86 @@ html {
 	}
 	}
 }
+.price {
+	padding: 11px 23px;
+	text-transform: uppercase;
+	font-weight: 700;
+	font-size: 14px;
+}
+.plan {
+	max-width: 670px;
+	width: 100%;
+	display: flex;
+	align-items: stretch;
+	text-align: center;
+	color: #26272d;
+	font-family: $font;
 
+	&__start {
+		max-width: 329px;
+		width: 100%;
+		border: 1px solid transparent;
+		border-radius: 12px;
+		background-color: #eaeaec;
+		padding-bottom: 50px;
+		&:hover {
+			transform: scale(1.1);
+			background-color: #ffffff;
+			box-shadow: 11px 13px 31px #dcdddf;
+		}
+	}
+	&__title {
+		font-size: 32px;
+		font-family: $font;
+		font-weight: 300;
+		margin-bottom: 50px;
+	}
+	&__button {
+		max-width: 200px;
+		width: 100%;
+		border-color: #267df4;
+		color: #267df4;
+		font-size: 16px;
+		padding: 12px 42px;
+		&:hover {
+			@extend .button_primary;
+			font-size: 16px;
+		}
+	}
+	&__subtitle {
+		padding-top: 70px;
+		color: $textColor;
+		font-size: 20px;
+		margin-bottom: 37px;
+	}
+	&__list {
+		padding: 0;
+		margin: 0;
+		list-style: none;
+		padding-bottom: 40px;
+	}
+}
+.advantage {
+	&__item {
+		&_last{
+			visibility: hidden;
+		}
+	}
+	&__link {
+		// display: flex;
+		// justify-content: space-between;
+		// align-items: center;
+		text-decoration: none;
+		color: $headerColor;
+		font-size: 16px;
+		font-weight: 400;
+		line-height: 2.5;
+		font-family: $font;
+	}
+	&__icon {
+		padding-right: 20px;
+	}
+}
 .subscribe{
 	background-color: #ffffff;
 	&__container{

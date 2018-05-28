@@ -10,6 +10,7 @@
 	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700|Varela+Round" rel="stylesheet">
 	<link rel="stylesheet" href="css/slick.css">
 	<link rel="stylesheet" href="css/slick-theme.css">
+	<link rel="stylesheet" href="css/sliders.css">
 </head>
 <body>
 	<header class="header">
@@ -87,7 +88,18 @@
 				<h2 class="interface__title">Beautiful Interface</h2>
 				<div class="interface__border"></div>
 				<h3 class="interface__subtitle">Landing screen</h3>
-<!-- слайдер, без понятия как его делать -->
+<!--interface slider -->
+				<div class="interface__slider">
+					<img src="images/iphone_border13.png" alt="border" class="border">
+					<div class="gallery">
+						<div class="gallery__item"><img src="images/screen1.png" alt="image" class="gallery__image"></div>
+						<div class="gallery__item"><img src="images/screen_2.png" alt="image" class="gallery__image"></div>
+						<div class="gallery__item"><img src="images/screen_3.png" alt="image" class="gallery__image"></div>
+						<div class="gallery__item"><img src="images/screen1.png" alt="image" class="gallery__image"></div>
+						<div class="gallery__item"><img src="images/screen_2.png" alt="image" class="gallery__image"></div>
+						<div class="gallery__item"><img src="images/screen_3.png" alt="image" class="gallery__image"></div>
+					</div>
+				</div>
 	    		<div class="install">
 	    			<h3 class="install__subtitle">Newprovidence</h3>
 	    			<h2 class="install__title">Get it to your smartphone </h2>
@@ -122,17 +134,42 @@
 		</section>
 		<section class="choice">
 			<div class="choice__container">
-<!-- без понятия как это делать -->
-				<h2 class="choice__title">Choose your perfect <br> plan</h2>
-				<div class="panel">
-					<h4 class="panel__title">you are</h4>
-					<div class="panel__box">
-						<a class="button button_info" href="#">Individual</a>
-						<a class="button button_info" href="#">Company</a>
+				<div class="choice__content">
+					<h2 class="choice__title">Choose your perfect <br> plan</h2>
+					<div class="panel">
+						<h4 class="panel__title">you are</h4>
+						<div class="panel__box">
+							<a class="button button_info" href="#">Individual</a>
+							<a class="button button_info" href="#">Company</a>
+						</div>
+					</div>
+					<div class="choice__description">Thus much I thought proper to tell you in<br> relation to yourself, and to the trust I reposed<br> in you.</div>
+					<div class="choice__question">Have a bigger team? <a class="choice__link" href="#">Let‘s talk</a> </div>
+				</div>
+				<div class="plan">
+					<div class="plan__start">
+						<h3 class="plan__title">Starter</h3>
+						<a href="#" class="price button button_secondary">free</a>
+						<div class="plan__subtitle">Build your schedule<br> every day</div>
+						<ul class="plan__list advantage">
+							<li class="advantage__item"><a href="#" class="advantage__link"><img src="images/mark.png" alt="icon" class="advantage__icon">Unlimeted events</a></li>
+							<li class="advantage__item"><a href="#" class="advantage__link"><img src="images/mark.png" alt="icon" class="advantage__icon">Connect Dropbox & Evernote</a></li>
+							<li class="advantage__item advantage__item_last"><a href="#" class="advantage__link"><img src="images/mark.png" alt="icon" class="advantage__icon">Connect Dropbox & Evernote</a></li>
+						</ul>
+						<a href="#" class="plan__button button button_secondary">Get started</a>
+					</div>
+					<div class="plan__start">
+						<h3 class="plan__title">Pro</h3>
+						<a href="#" class="price button button_secondary">$4.99</a>
+						<div class="plan__subtitle">Make your life <br> better</div>
+						<ul class="plan__list advantage">
+							<li class="advantage__item"><a href="#" class="advantage__link"><img src="images/mark.png" alt="icon" class="advantage__icon">Unlimeted events</a></li>
+							<li class="advantage__item"><a href="#" class="advantage__link"><img src="images/mark.png" alt="icon" class="advantage__icon">Connect Dropbox & Evernote</a></li>
+							<li class="advantage__item"><a href="#" class="advantage__link"><img src="images/mark.png" alt="icon" class="advantage__icon">Personal Assistant</a></li>
+						</ul>
+						<a href="#" class="plan__button button button_secondary">Make me a Pro</a>
 					</div>
 				</div>
-				<div class="choice__description">Thus much I thought proper to tell you in<br> relation to yourself, and to the trust I reposed<br> in you.</div>
-				<div class="choice__question">Have a bigger team? <a class="choice__link" href="#">Let‘s talk</a> </div>			
 			</div>
 		</section>
 		<section class="subscribe">
@@ -203,7 +240,7 @@
 		</div>
 	</div>
 	</footer>
-	<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="http://code.jquery.com/jquery-2.1.0.js"></script>
 	<script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 	<script src="javascript/build.js"></script>
 </body>
