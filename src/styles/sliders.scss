@@ -69,23 +69,19 @@
 
 }
 .gallery {
-	width: 100%;
-	margin: $margin;
     &__item {
-		max-width: 320px;
-		width: 100%;
+		margin-right: 60px;
         border: none;
         outline: none;
-        margin-right: 37px;
-        position: relative;
     }
     &__image{
 	    box-shadow: 11px 13px 31px #dcdddf;
-
+		
     }
 }
 .border {
+	z-index: 99;
     position: absolute;
-    top: 10px;
-	left: 39%;
+    top: 7px;
+	left: 37%;
 }

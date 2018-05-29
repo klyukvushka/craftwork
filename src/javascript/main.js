@@ -32,10 +32,10 @@
     arrows: false,
     autoplay: true,
     infinite: true,
-    autoplaySpeed: 3000,
-    slidesToShow: 5,
+    autoplaySpeed: 2500,
+    centerMode: true,
+    slidesToShow: 3,
     slidesToScroll: 1,
-    adaptiveHeight: true,
     variableWidth: true,
   });
 

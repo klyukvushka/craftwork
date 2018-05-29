@@ -11,6 +11,7 @@
 	color: $color;
 	border: $border;
 	font-size: $font-size;
+	transition: .3s ease-out .2s;
 	}
 
 @mixin fontTitle ($font-family, $color, $font-size){

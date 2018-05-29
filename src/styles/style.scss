@@ -270,9 +270,9 @@ html {
 	&__container{
 		padding-top: 150px;
 		@extend .container;
-		height: 900px;
 		padding-left: 25px;
 		padding-right: 25px;
+		padding-bottom: 50px;
 		display: flex;
 		flex-direction: column;
 		justify-content: flex-start;
@@ -340,7 +340,7 @@ html {
 		}
 	}
 	@include desktop {
-		background-size: 45% , auto;
+		background-size: 33% , auto;
 		}
 }
 .buttons{
@@ -521,7 +521,6 @@ html {
 	&__container{
 		padding-top: 50px;
 		@extend .container;
-		max-width: 1800px;
 		padding-left: 25px;
 		padding-right: 25px;
 		padding-bottom: 50px;
@@ -661,7 +660,7 @@ html {
 		@extend .container;
 		padding-left: 25px;
 		padding-right: 25px;
-		padding-bottom: 50px;
+		padding-bottom: 50px; 
 		@include tablet-landscape {
 			height: auto;
 			
@@ -847,10 +846,11 @@ html {
 	font-size: 14px;
 }
 .plan {
-	max-width: 670px;
+	max-width: 676px;
 	width: 100%;
 	display: flex;
 	align-items: stretch;
+	justify-content: space-between;
 	text-align: center;
 	color: #26272d;
 	font-family: $font;
@@ -862,6 +862,7 @@ html {
 		border-radius: 12px;
 		background-color: #eaeaec;
 		padding-bottom: 50px;
+		transition: .3s ease-out .2s;
 		&:hover {
 			transform: scale(1.1);
 			background-color: #ffffff;
