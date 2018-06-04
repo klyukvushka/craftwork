@@ -46,7 +46,7 @@ gulp.task("javascript", function(cb) {
   pump(
     [
       gulp.src([
-        "src/javascript/jQuery_v3.3.1min.js",
+        "src/javascript/jQuery_v3.3.1.js",
         "src/javascript/slick.js",
         "src/javascript/main.js"
       ]),
@@ -65,15 +65,11 @@ gulp.task("html", function() {
     .pipe(gulp.dest("dist"));
 });
 
-gulp.task(
-  "watch",
-  ["browser-sync", "sass", "images", "javascript", "html"],
-  function() {
-    gulp.watch(["src/styles/**/*.scss"], ["sass"]);
-    gulp.watch(["src/images/**/*"], ["images"]);
-    gulp.watch(["src/javascript/*.js"], ["javascript"]);
-    gulp.watch(["src/*.html"], ["html"]);
-  }
-);
+gulp.task("watch", ["browser-sync", "sass", "images", "javascript", "html"], function() {
+  gulp.watch(["src/styles/**/*.scss"], ["sass"]);
+  gulp.watch(["src/images/**/*"], ["images"]);
+  gulp.watch(["src/javascript/*.js"], ["javascript"]);
+  gulp.watch(["src/*.html"], ["html"]);
+});
 
 gulp.task("default", ["watch"]);
