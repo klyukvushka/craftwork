@@ -1,56 +1,53 @@
-@mixin button ($background-color, $color, $border, $font-size){
-	display: inline-block;
-	text-decoration: none;
-	font-family: $font;
-	font-weight: 400;
-	line-height: 1;
-	padding: 12px 33px; 
-	border-radius: 30px;
-	text-align: center;
-	background-color: $background-color;
-	color: $color;
-	border: $border;
-	font-size: $font-size;
-	transition: .3s ease-out .2s;
-	}
-
-@mixin fontTitle ($font-family, $color, $font-size){
-	font-family: $font-family;
-	color: $color;
-	font-size: $font-size;
+@mixin button($background-color, $color, $border, $font-size) {
+  display: inline-block;
+  text-decoration: none;
+  font-family: $font;
+  font-weight: 400;
+  line-height: 1;
+  padding: 12px 33px;
+  border-radius: 30px;
+  text-align: center;
+  background-color: $background-color;
+  color: $color;
+  border: $border;
+  font-size: $font-size;
+  transition: 0.3s ease-out 0.2s;
 }
 
-
-@mixin buttonStates ($color, $background-color, $box-shadow){
-	&:hover{
-		color: $color;
-		background-color: $background-color;
-		box-shadow: $box-shadow;
-	}
-	&:active{
-		background-color: darken($background-color, 40%);
-	}
+@mixin fontTitle($font-family, $color, $font-size) {
+  font-family: $font-family;
+  color: $color;
+  font-size: $font-size;
 }
 
+@mixin buttonStates($color, $background-color, $box-shadow) {
+  &:hover {
+    color: $color;
+    background-color: $background-color;
+    box-shadow: $box-shadow;
+  }
+  &:active {
+    background-color: darken($background-color, 40%);
+  }
+}
 
 @mixin phone {
-	@media screen and (max-width: $phone){
-		@content;
-	}
+  @media screen and (max-width: $phone) {
+    @content;
+  }
 }
 @mixin tablet-portrait {
-	@media screen and (max-width: $tablet-portrait){
-		@content;
-	}
+  @media screen and (max-width: $tablet-portrait) {
+    @content;
+  }
 }
 @mixin tablet-landscape {
-	@media screen and (min-width: $tablet-portrait + 1px) and (max-width: $desktop - 1px) {
-		@content;
-	}
+  @media screen and (min-width: $tablet-portrait + 1px) and (max-width: $desktop - 1px) {
+    @content;
+  }
 }
 @mixin desktop {
-	@media screen and (min-width: $desktop){
-		@content;
-	}
+  @media screen and (min-width: $desktop) {
+    @content;
+  }
 }
-

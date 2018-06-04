@@ -13,13 +13,13 @@ html {
   box-sizing: inherit;
 }
 
-.container{
+.container {
 	margin: $margin;
 	max-width: $max-width;
 	width: $width;
 }
 
-.header{
+.header {
 	background: url(../images/iphone.png),url(../images/background.jpg);
 	background-position:  center bottom, center center;
 	background-repeat: no-repeat, no-repeat;
@@ -84,18 +84,18 @@ html {
 			padding-top: 20px;
 		}
 	}
-	&__button{
+	&__button {
 		display: flex;
 		justify-content: center;
 		align-items: center;
 	}
 }
-.menu{
+.menu {
 	padding-top: 40px;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	&__wrapper{
+	&__wrapper {
 		display: flex;
 		justify-content: space-between;;
 		flex-wrap: nowrap;
@@ -110,7 +110,7 @@ html {
 			width: auto;
 		}
 	}
-	&__items{
+	&__items {
 		margin: 0;
 		list-style: none;
 		padding-left: 0;
@@ -127,7 +127,7 @@ html {
 			display: none;
 		}
 	}
-	&__content{
+	&__content {
 		width: 400px;
 		display: flex;
 		justify-content: space-between;;
@@ -143,7 +143,7 @@ html {
 			width: auto;
 		}
 	}
-	&__parts{
+	&__parts {
 		width: 200px;
 		list-style: none;
 		margin: 0;
@@ -158,7 +158,7 @@ html {
 		}
 	}
 	
-	&__link{
+	&__link {
 		text-align: center;
 		font-family: $font;
 		font-weight: 400;
@@ -184,7 +184,7 @@ html {
 		width: 30px;
 	}
 }
-.feature{
+.feature {
 	background-color: $background;
 	&__container{
 		@extend .container;
@@ -225,7 +225,7 @@ html {
 			height: auto;
 		}
 	}
-	&__content{
+	&__content {
 		width: 520px;
 
 		@include tablet-portrait {
@@ -235,7 +235,7 @@ html {
 			width: auto;
 		}
 	}
-	&__illustration{
+	&__illustration {
 		padding-bottom: 40px;
 		@include tablet-portrait {
 			padding-bottom: 10px;
